@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "activities": "Activities",
+    "events": "Events",
+    "blog": "Blog",
+    "contact": "Contact",
+    "join": "Join Us"
+  },
+  "footer": {
+    "description": "The reference community for developers in the Democratic Republic of Congo. Together, let's build the tech ecosystem of tomorrow.",
+    "col_nav": "Navigation",
+    "col_legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Legal Notice",
+    "cookies": "Cookies",
+    "rights": "All rights reserved.",
+    "built_by": "Built by",
+    "made_in": "Made in"
+  },
+  "hero": {
+    "badge": "The first tech community in DRC",
+    "title_1": "CODE THE",
+    "title_2": "FUTURE.",
+    "description": "Gather, train, and propel Congolese talents. Congo Developer Club is the hub where ideas become code, and code becomes impact.",
+    "cta_join": "Join the Movement",
+    "cta_actions": "Discover our actions"
+  },
+  "impact": {
+    "title_part1": "Building careers,",
+    "title_part2": "transforming the nation.",
+    "description": "Since our creation, our mission has been clear: to build an ecosystem where Congolese technical expertise can thrive, collaborate, and reach the highest global standards.",
+    "stat1_title": "National Hackathon 2025",
+    "stat1_desc": "300 participants, 45 innovative solutions for financial inclusion.",
+    "stat2_title": "Campus Tech Congo",
+    "stat2_desc": "500+ students guided toward qualified tech careers.",
+    "stat3_title": "Open Source Contribution",
+    "stat3_desc": "Creation and maintenance of local libraries (+10k stars).",
+    "members_count": "Active Members"
+  }
+}

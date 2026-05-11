@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "activities": "Activités",
+    "events": "Événements",
+    "blog": "Blog",
+    "contact": "Contact",
+    "join": "Nous Rejoindre"
+  },
+  "footer": {
+    "description": "La communauté de référence pour les développeurs en République Démocratique du Congo. Ensemble, bâtissons l'écosystème tech de demain.",
+    "col_nav": "Navigation",
+    "col_legal": "Légal",
+    "privacy": "Confidentialité",
+    "terms": "Mentions légales",
+    "cookies": "Cookies",
+    "rights": "Tous droits réservés.",
+    "built_by": "Développé par",
+    "made_in": "Fait au"
+  },
+  "hero": {
+    "badge": "La première communauté tech de la RDC",
+    "title_1": "CODE THE",
+    "title_2": "FUTURE.",
+    "description": "Rassembler, former et propulser les talents congolais. Congo Developer Club est le hub où les idées deviennent du code, et le code devient impact.",
+    "cta_join": "Rejoindre le Mouvement",
+    "cta_actions": "Découvrir nos actions"
+  },
+  "impact": {
+    "title_part1": "Bâtir des carrières,",
+    "title_part2": "transformer le pays.",
+    "description": "Depuis notre création, notre mission est claire : créer un écosystème où l'expertise technique congolaise peut s'épanouir, collaborer et s'exporter au plus haut niveau mondial.",
+    "stat1_title": "Hackathon National 2025",
+    "stat1_desc": "300 participants, 45 solutions innovantes pour l'inclusion financière.",
+    "stat2_title": "Campus Tech Congo",
+    "stat2_desc": "+500 étudiants accompagnés vers des emplois qualifiés.",
+    "stat3_title": "Contribution Open Source",
+    "stat3_desc": "Initiation et maintenance de librairies locales (+10k stars).",
+    "members_count": "Membres Actifs"
+  }
+}
