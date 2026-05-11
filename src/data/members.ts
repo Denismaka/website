@@ -5,7 +5,6 @@ export const MEMBERS = [
     { githubUser: 'ardinbig' },
     { githubUser: 'AshDest' },
     { githubUser: 'Baraka24' },
-    { githubUser: 'barakadanny' },
     { githubUser: 'bienvenuushindi' },
     { githubUser: 'Cedric921' },
     { githubUser: 'Tacite243' },

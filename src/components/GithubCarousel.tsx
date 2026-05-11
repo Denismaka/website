@@ -4,7 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { ContributorCard } from './ContributorCard';
 import Autoplay from 'embla-carousel-autoplay';
 
-export function GithubCarousel({ contributors }: { contributors: any[] }) {
+export function GithubCarousel({ contributors, labels }: { contributors: any[]; labels: any }) {
     const [emblaRef] = useEmblaCarousel(
         {
             loop: true,
@@ -31,10 +31,10 @@ export function GithubCarousel({ contributors }: { contributors: any[] }) {
                         <ContributorCard
                             user={user}
                             index={i}
-                            tProfile="Profile"
+                            tProfile={labels.profile}
                         />
                         <div className="mt-2 text-center text-xs font-mono text-primary">
-                            {user.totalContributions} contributions
+                            {user.totalContributions} {user.totalContributions === 1 ? labels.contribution_singular : labels.contributions}
                         </div>
                     </div>
                 ))}

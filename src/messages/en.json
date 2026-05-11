@@ -43,6 +43,8 @@
     "title": "Top GitHub Contributors",
     "subtitle": "Discover and follow the most followed and active Congolese developers on GitHub.",
     "cta": "View on GitHub",
-    "profile": "Profile"
+    "profile": "Profile",
+    "contributions": "contributions",
+    "contribution_singular": "contribution"
   }
 }

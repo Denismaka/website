@@ -43,6 +43,8 @@
     "title": "Top Contributeurs GitHub",
     "subtitle": "Découvrez et suivez les développeurs congolais les plus suivis et actifs sur GitHub.",
     "cta": "Voir sur GitHub",
-    "profile": "Profil"
+    "profile": "Profil",
+    "contributions": "contributions",
+    "contribution_singular": "contribution"
   }
 }

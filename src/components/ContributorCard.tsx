@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 
+
 export function ContributorCard({ user, index, tProfile }: { user: any, index: number, tProfile: string }) {
     return (
         <motion.div
@@ -21,9 +22,6 @@ export function ContributorCard({ user, index, tProfile }: { user: any, index: n
                 <h3 className="text-foreground font-bold text-sm truncate w-full mb-1 group-hover:text-primary transition-colors">@{user.login}</h3>
                 <div className="flex items-center justify-center text-[10px] uppercase tracking-widest text-muted-foreground font-mono">
                     <FaGithub className="w-3 h-3 mr-1" /> {tProfile}
-                </div>
-                <div className="text-xs font-semibold text-primary mt-2">
-                    {user.totalContributions} cont.
                 </div>
             </a>
         </motion.div>
