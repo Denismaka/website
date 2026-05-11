@@ -1,3 +1,4 @@
+import GithubSection from "@/components/GithubSection";
 import Hero from "@/components/Hero";
 import ImpactSection from "@/components/ImpactSection";
 
@@ -7,6 +8,7 @@ export default function Home() {
     <>
       <Hero />
       <ImpactSection />
+      <GithubSection />
     </>
   );
 }

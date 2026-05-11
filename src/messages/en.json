@@ -38,5 +38,11 @@
     "stat3_title": "Open Source Contribution",
     "stat3_desc": "Creation and maintenance of local libraries (+10k stars).",
     "members_count": "Active Members"
+  },
+  "github": {
+    "title": "Top GitHub Contributors",
+    "subtitle": "Discover and follow the most followed and active Congolese developers on GitHub.",
+    "cta": "View on GitHub",
+    "profile": "Profile"
   }
 }
