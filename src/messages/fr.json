@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "activities": "Activités",
+    "events": "Événements",
+    "blog": "Blog",
+    "contact": "Contact",
+    "join": "Nous Rejoindre"
+  },
+  "footer": {
+    "description": "La communauté de référence pour les développeurs en République Démocratique du Congo. Ensemble, bâtissons l'écosystème tech de demain.",
+    "col_nav": "Navigation",
+    "col_legal": "Légal",
+    "privacy": "Confidentialité",
+    "terms": "Mentions légales",
+    "cookies": "Cookies",
+    "rights": "Tous droits réservés.",
+    "built_by": "Développé par",
+    "made_in": "Fait au"
+  },
+  "hero": {
+    "badge": "La première communauté tech en RDC",
+    "title_1": "CODE LE",
+    "title_2": "FUTUR.",
+    "description": "Rassembler, former et propulser les talents congolais. Congo Developer Club est le hub où les idées deviennent du code et le code devient de l’impact.",
+    "cta_join": "Rejoindre le mouvement",
+    "cta_actions": "Découvrir nos actions",
+    "stats_developers": "Développeurs",
+    "stats_projects": "Projets",
+    "stats_events": "Événements",
+    "ecosystem_title": "Écosystème Tech",
+    "ecosystem_description": "Infrastructure & technologies modernes",
+    "growth": "Croissance de la communauté"
+  },
+  "impact": {
+    "title_part1": "Bâtir des carrières,",
+    "title_part2": "transformer le pays.",
+    "description": "Depuis notre création, notre mission est claire : créer un écosystème où l'expertise technique congolaise peut s'épanouir, collaborer et s'exporter au plus haut niveau mondial.",
+    "stat1_title": "Hackathon National 2025",
+    "stat1_desc": "300 participants, 45 solutions innovantes pour l'inclusion financière.",
+    "stat2_title": "Campus Tech Congo",
+    "stat2_desc": "+500 étudiants accompagnés vers des emplois qualifiés.",
+    "stat3_title": "Contribution Open Source",
+    "stat3_desc": "Initiation et maintenance de librairies locales (+10k stars).",
+    "members_count": "Membres Actifs"
+  },
+  "github": {
+    "title": "Top Contributeurs GitHub",
+    "subtitle": "Découvrez et suivez les développeurs congolais les plus suivis et actifs sur GitHub.",
+    "cta": "Voir sur GitHub",
+    "profile": "Profil",
+    "contributions": "contributions",
+    "contribution_singular": "contribution"
+  },
+  "events": {
+    "title": "Agenda.",
+    "view_all": "Voir tout",
+    "more_events": "Plus d'événements",
+    "register": "S'inscrire",
+    "category": "Conférence",
+    "no_events": "Aucune activité en cours d'organisation.",
+    "check_back": "Revenez plus tard pour de nouvelles activités."
+  },
+  "news": {
+    "title": "Dernières Nouvelles.",
+    "tag": "Actualité",
+    "read": "Lire l'article",
+    "view_all": "Voir tous les articles"
+  },
+  "cta": {
+    "label": "System.out.println(\"Rejoignez-nous\");",
+    "title_1": "PRÊT À",
+    "title_2": "COMMIT ?",
+    "description": "Rejoignez le Congo Developer Club et contribuez à façonner l'avenir technologique de la RDC. Push your potential.",
+    "button": "Devenir Membre"
+  }
+}
