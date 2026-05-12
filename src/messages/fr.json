@@ -61,5 +61,12 @@
     "tag": "Actualité",
     "read": "Lire l'article",
     "view_all": "Voir tous les articles"
+  },
+  "cta": {
+    "label": "System.out.println(\"Rejoignez-nous\");",
+    "title_1": "PRÊT À",
+    "title_2": "COMMIT ?",
+    "description": "Rejoignez le Congo Developer Club et contribuez à façonner l'avenir technologique de la RDC. Push your potential.",
+    "button": "Devenir Membre"
   }
 }

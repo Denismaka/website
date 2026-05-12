@@ -61,5 +61,12 @@
     "tag": "Insight",
     "read": "Read Article",
     "view_all": "View all articles"
+  },
+  "cta": {
+    "label": "System.out.println(\"Join Us\");",
+    "title_1": "READY TO",
+    "title_2": "COMMIT?",
+    "description": "Join the Congo Developer Club and help shape the technological future of the DRC. Push your potential.",
+    "button": "Become a Member"
   }
 }

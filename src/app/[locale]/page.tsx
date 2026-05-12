@@ -1,3 +1,4 @@
+import CTASection from "@/components/CTASection";
 import EventSection from "@/components/EventSection";
 import GithubSection from "@/components/GithubSection";
 import Hero from "@/components/Hero";
@@ -125,6 +126,7 @@ export default function Home() {
       <GithubSection />
       <EventSection events={upcomingEvents} />
       <NewsSection />
+      <CTASection />
     </>
   );
 }
