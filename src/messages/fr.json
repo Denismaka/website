@@ -46,5 +46,14 @@
     "profile": "Profil",
     "contributions": "contributions",
     "contribution_singular": "contribution"
+  },
+  "events": {
+    "title": "Agenda.",
+    "view_all": "Voir tout",
+    "more_events": "Plus d'événements",
+    "register": "S'inscrire",
+    "category": "Conférence",
+    "no_events": "Aucune activité en cours d'organisation.",
+    "check_back": "Revenez plus tard pour de nouvelles activités."
   }
 }
