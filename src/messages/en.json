@@ -55,5 +55,11 @@
     "category": "Conference",
     "no_events": "No events currently organized.",
     "check_back": "Check back later for new activities."
+  },
+  "news": {
+    "title": "Latest News.",
+    "tag": "Insight",
+    "read": "Read Article",
+    "view_all": "View all articles"
   }
 }

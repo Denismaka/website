@@ -55,5 +55,11 @@
     "category": "Conférence",
     "no_events": "Aucune activité en cours d'organisation.",
     "check_back": "Revenez plus tard pour de nouvelles activités."
+  },
+  "news": {
+    "title": "Dernières Nouvelles.",
+    "tag": "Actualité",
+    "read": "Lire l'article",
+    "view_all": "Voir tous les articles"
   }
 }
