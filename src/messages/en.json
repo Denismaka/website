@@ -25,7 +25,13 @@
     "title_2": "FUTURE.",
     "description": "Gather, train, and propel Congolese talents. Congo Developer Club is the hub where ideas become code, and code becomes impact.",
     "cta_join": "Join the Movement",
-    "cta_actions": "Discover our actions"
+    "cta_actions": "Discover our actions",
+    "stats_developers": "Developers",
+    "stats_projects": "Projects",
+    "stats_events": "Events",
+    "ecosystem_title": "Tech Ecosystem",
+    "ecosystem_description": "Modern infrastructure & technologies",
+    "growth": "Community Growth"
   },
   "impact": {
     "title_part1": "Building careers,",

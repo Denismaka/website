@@ -20,12 +20,18 @@
     "made_in": "Fait au"
   },
   "hero": {
-    "badge": "La première communauté tech de la RDC",
-    "title_1": "CODE THE",
-    "title_2": "FUTURE.",
-    "description": "Rassembler, former et propulser les talents congolais. Congo Developer Club est le hub où les idées deviennent du code, et le code devient impact.",
-    "cta_join": "Rejoindre le Mouvement",
-    "cta_actions": "Découvrir nos actions"
+    "badge": "La première communauté tech en RDC",
+    "title_1": "CODE LE",
+    "title_2": "FUTUR.",
+    "description": "Rassembler, former et propulser les talents congolais. Congo Developer Club est le hub où les idées deviennent du code et le code devient de l’impact.",
+    "cta_join": "Rejoindre le mouvement",
+    "cta_actions": "Découvrir nos actions",
+    "stats_developers": "Développeurs",
+    "stats_projects": "Projets",
+    "stats_events": "Événements",
+    "ecosystem_title": "Écosystème Tech",
+    "ecosystem_description": "Infrastructure & technologies modernes",
+    "growth": "Croissance de la communauté"
   },
   "impact": {
     "title_part1": "Bâtir des carrières,",
