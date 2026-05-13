@@ -74,5 +74,83 @@
     "title_2": "COMMIT?",
     "description": "Join the Congo Developer Club and help shape the technological future of the DRC. Push your potential.",
     "button": "Become a Member"
+  },
+  "about": {
+    "manifesto": "Manifesto",
+    "title_1": "One community,",
+    "title_2": "one mission.",
+    "desc": "Congo Developer Club was born from the desire to break the isolation of tech talents in the DRC. We believe that code is a universal language of progress.",
+    "quote": "Our strength lies in collaboration. Every line of code written together brings us closer to a more digital and prosperous Congo.",
+    "founded": "Founded in 2022",
+    "principles": "Core Principles",
+    "principles_title": "Our Fundamental Values",
+    "val1_title": "Purpose",
+    "val1_desc": "Connecting every Congolese developer to global opportunities.",
+    "val2_title": "Vision",
+    "val2_desc": "Building an ecosystem where tech innovation improves everyday life in the Congo.",
+    "val3_title": "Excellence",
+    "val3_desc": "Promoting the highest quality standards in software development."
+  },
+  "testimonials": {
+    "title": "What they say.",
+    "items": [
+      {
+        "name": "John Doe",
+        "role": "Fullstack Dev",
+        "quote": "CDC changed my career path completely."
+      },
+      {
+        "name": "Sarah K.",
+        "role": "UI/UX Designer",
+        "quote": "The most active community in DRC!"
+      }
+    ]
+  },
+  "activities": {
+    "badge": "Our programs and initiatives",
+    "title": "Our Activities.",
+    "subtitle": "We design pragmatic initiatives to support every stage of a developer's career, from beginner to expert.",
+    "learn_more": "Learn more",
+    "programs": [
+      {
+        "title": "CDC Mentoring",
+        "desc": "An intensive 3-month program to transform beginners into employable developers."
+      },
+      {
+        "title": "Innovate Congo",
+        "desc": "Hackathons and startup competitions to solve local problems through tech."
+      },
+      {
+        "title": "Open Source Initiative",
+        "desc": "Encouraging contributions to global and local open-source projects."
+      },
+      {
+        "title": "Tech Meetups",
+        "desc": "Monthly meetups to share knowledge and network."
+      }
+    ]
+  },
+  "events_page": {
+    "title": "Nos Événements",
+    "subtitle": "Participez à nos prochaines rencontres et développez vos compétences.",
+    "days_left": "{days} jours restants",
+    "register": "Détails & Inscription",
+    "quick_reg_title": "Restez informé de nos prochaines sessions.",
+    "quick_reg_desc": "Inscrivez-vous à notre liste de diffusion...",
+    "form_name": "Nom",
+    "form_email": "Adresse e-mail",
+    "form_msg": "Message (Optionnel)",
+    "submit": "S’inscrire à la liste"
+  },
+  "event_detail": {
+    "back": "Back to events",
+    "about": "About this event",
+    "register_title": "Reserve your spot",
+    "name": "Full Name",
+    "email": "Email",
+    "message": "Message (Optional)",
+    "submit": "Confirm Registration",
+    "success_title": "Registration Successful!",
+    "success_desc": "A confirmation email has been sent."
   }
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
     MoveRight,
@@ -78,9 +77,9 @@ export default function Hero() {
             </div>
 
             {/* GLOWS */}
-            <div className="absolute top-[-15%] left-[-10%] w-[45rem] h-[45rem] rounded-full bg-primary/20 blur-[140px]" />
+            <div className="absolute top-[-15%] left-[-10%] w-180 h-180 rounded-full bg-primary/20 blur-[140px]" />
 
-            <div className="absolute bottom-[-20%] right-[-10%] w-[40rem] h-[40rem] rounded-full bg-emerald-500/10 blur-[140px]" />
+            <div className="absolute bottom-[-20%] right-[-10%] w-160 h-160 rounded-full bg-emerald-500/10 blur-[140px]" />
 
             {/* CLOUDS */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -95,9 +94,9 @@ export default function Hero() {
                         repeat: Infinity,
                         ease: 'easeInOut',
                     }}
-                    className="absolute top-[8%] left-[3%] text-white/60 dark:text-white/[0.03]"
+                    className="absolute top-[8%] left-[3%] text-white/60 dark:text-white/3"
                 >
-                    <CloudSVG className="w-[22rem] blur-sm" />
+                    <CloudSVG className="w-88 blur-sm" />
                 </motion.div>
 
                 {/* CLOUD 2 */}
@@ -111,9 +110,9 @@ export default function Hero() {
                         repeat: Infinity,
                         ease: 'easeInOut',
                     }}
-                    className="absolute top-[18%] right-[5%] text-white dark:text-white/[0.03]"
+                    className="absolute top-[18%] right-[5%] text-white dark:text-white/3"
                 >
-                    <CloudSVG className="w-[30rem]" />
+                    <CloudSVG className="w-120" />
                 </motion.div>
 
                 {/* CLOUD 3 */}
@@ -127,7 +126,7 @@ export default function Hero() {
                         repeat: Infinity,
                         ease: 'easeInOut',
                     }}
-                    className="absolute bottom-[10%] left-[18%] text-white/40 dark:text-primary/[0.05]"
+                    className="absolute bottom-[10%] left-[18%] text-white/40 dark:text-primary/5"
                 >
                     <CloudSVG className="w-64 blur-[2px]" />
                 </motion.div>
@@ -142,7 +141,7 @@ export default function Hero() {
                         repeat: Infinity,
                         ease: 'easeInOut',
                     }}
-                    className="absolute bottom-[20%] right-[20%] text-white/20 dark:text-primary/[0.03]"
+                    className="absolute bottom-[20%] right-[20%] text-white/20 dark:text-primary/3"
                 >
                     <CloudSVG className="w-44 blur-sm" />
                 </motion.div>
@@ -175,7 +174,7 @@ export default function Hero() {
                                 {t('title_1')}
                             </span>
 
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-teal-300">
+                            <span className="block text-transparent bg-clip-text bg-linear-to-r from-primary via-emerald-400 to-teal-300">
                                 {t('title_2')}
                             </span>
                         </h1>
@@ -195,7 +194,7 @@ export default function Hero() {
                                     transition={{
                                         delay: 0.2 + i * 0.1,
                                     }}
-                                    className="group min-w-[150px] rounded-2xl border border-border bg-card/70 backdrop-blur-xl px-5 py-4 hover:border-primary/40 transition-all"
+                                    className="group min-w-37.5rounded-2xl border border-border bg-card/70 backdrop-blur-xl px-5 py-4 hover:border-primary/40 transition-all"
                                 >
                                     <div className="flex items-center justify-between mb-3">
                                         <item.icon className="w-4 h-4 text-primary" />
@@ -246,9 +245,9 @@ export default function Hero() {
                     >
                         <div className="relative">
                             {/* MAIN CARD */}
-                            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-2xl shadow-[0_25px_80px_rgba(0,0,0,0.12)]">
+                            <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-white/60 dark:bg-white/3 backdrop-blur-2xl shadow-[0_25px_80px_rgba(0,0,0,0.12)]">
                                 {/* GLOW */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent" />
+                                <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent" />
 
                                 {/* HEADER */}
                                 <div className="flex items-center justify-between px-8 py-6 border-b border-border">
@@ -268,7 +267,7 @@ export default function Hero() {
                                 </div>
 
                                 {/* TECH LIST */}
-                                <div className="relative h-[500px] overflow-hidden px-8 py-8">
+                                <div className="relative h-125 overflow-hidden px-8 py-8">
                                     <motion.div
                                         className="flex flex-col gap-5"
                                         animate={{
@@ -284,7 +283,7 @@ export default function Hero() {
                                             (tech, i) => (
                                                 <div
                                                     key={`${tech}-${i}`}
-                                                    className="group flex items-center justify-between rounded-2xl border border-border bg-background/40 px-5 py-4 hover:border-primary/40 hover:bg-primary/[0.03] transition-all"
+                                                    className="group flex items-center justify-between rounded-2xl border border-border bg-background/40 px-5 py-4 hover:border-primary/40 hover:bg-primary/3 transition-all"
                                                 >
                                                     <span className="font-mono text-sm uppercase tracking-[0.25em] text-foreground font-bold">
                                                         {tech}
@@ -297,9 +296,9 @@ export default function Hero() {
                                     </motion.div>
 
                                     {/* FADES */}
-                                    <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+                                    <div className="absolute top-0 left-0 right-0 h-24 bg-linear-to-b from-background to-transparent pointer-events-none" />
 
-                                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+                                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-background to-transparent pointer-events-none" />
                                 </div>
                             </div>
 

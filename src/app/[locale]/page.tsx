@@ -4,6 +4,7 @@ import GithubSection from "@/components/GithubSection";
 import Hero from "@/components/Hero";
 import ImpactSection from "@/components/ImpactSection";
 import NewsSection from "@/components/NewsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 // Exemple de données - à remplacer par un fetch API plus tard
 const upcomingEvents = [
@@ -127,6 +128,7 @@ export default function Home() {
       <EventSection events={upcomingEvents} />
       <NewsSection />
       <CTASection />
+      <TestimonialsSection />
     </>
   );
 }

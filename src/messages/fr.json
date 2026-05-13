@@ -74,5 +74,83 @@
     "title_2": "COMMIT ?",
     "description": "Rejoignez le Congo Developer Club et contribuez à façonner l'avenir technologique de la RDC. Push your potential.",
     "button": "Devenir Membre"
+  },
+  "about": {
+    "manifesto": "Manifesto",
+    "title_1": "Une communauté,",
+    "title_2": "une mission.",
+    "desc": "Le Congo Developer Club est né de la volonté de briser l'isolement des talents tech en RDC. Nous croyons que le code est un langage universel de progrès.",
+    "quote": "Notre force réside dans notre collaboration. Chaque ligne de code écrite ensemble nous rapproche d'un Congo plus numérique et prospère.",
+    "founded": "Fondé en 2022",
+    "principles": "Core Principles",
+    "principles_title": "Nos Valeurs Fondamentales",
+    "val1_title": "Objectif",
+    "val1_desc": "Connecter chaque développeur congolais à des opportunités mondiales.",
+    "val2_title": "Vision",
+    "val2_desc": "Créer un écosystème où l'innovation tech améliore la vie quotidienne au Congo.",
+    "val3_title": "Excellence",
+    "val3_desc": "Promouvoir les standards de qualité les plus élevés dans le développement logiciel."
+  },
+  "testimonials": {
+    "title": "Ce qu'ils en disent.",
+    "items": [
+      {
+        "name": "John Doe",
+        "role": "Développeur Fullstack",
+        "quote": "Le CDC a complètement changé ma carrière."
+      },
+      {
+        "name": "Sarah K.",
+        "role": "Designer UI/UX",
+        "quote": "La communauté la plus active en RDC !"
+      }
+    ]
+  },
+  "activities": {
+    "badge": "Nos programmes et initiatives",
+    "title": "Nos Activités.",
+    "subtitle": "Nous concevons des initiatives pragmatiques pour accompagner chaque étape du parcours d’un développeur, du débutant à l’expert.",
+    "learn_more": "En savoir plus",
+    "programs": [
+      {
+        "title": "Mentorat CDC",
+        "desc": "Un programme intensif de 3 mois pour transformer les débutants en développeurs employables."
+      },
+      {
+        "title": "Innovate Congo",
+        "desc": "Des hackathons et concours de startups pour résoudre les problèmes locaux grâce à la technologie."
+      },
+      {
+        "title": "Initiative Open Source",
+        "desc": "Encourager les contributions aux projets open source locaux et internationaux."
+      },
+      {
+        "title": "Rencontres Tech",
+        "desc": "Des rencontres mensuelles pour partager les connaissances et développer son réseau."
+      }
+    ]
+  },
+  "events_page": {
+    "title": "Nos Événements",
+    "subtitle": "Participez à nos prochaines rencontres et boostez vos compétences.",
+    "days_left": "{days} jours restants",
+    "register": "Détails & Inscription",
+    "quick_reg_title": "Restez informé des prochaines sessions.",
+    "quick_reg_desc": "Inscrivez-vous à notre liste de diffusion...",
+    "form_name": "Nom",
+    "form_email": "Email",
+    "form_msg": "Message (Optionnel)",
+    "submit": "S'inscrire à la liste"
+  },
+  "event_detail": {
+    "back": "Retour aux événements",
+    "about": "À propos de cet événement",
+    "register_title": "Réservez votre place",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "message": "Message (Optionnel)",
+    "submit": "Confirmer l’inscription",
+    "success_title": "Inscription réussie !",
+    "success_desc": "Un e-mail de confirmation a été envoyé."
   }
 }
