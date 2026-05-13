@@ -131,10 +131,11 @@
     ]
   },
   "events_page": {
+    "hero_badge": "agenda",
     "title": "Nos Événements",
     "subtitle": "Participez à nos prochaines rencontres et boostez vos compétences.",
-    "days_left": "{days} jours restants",
     "register": "Détails & Inscription",
+    "days_left": "{days} jours restants",
     "quick_reg_title": "Restez informé des prochaines sessions.",
     "quick_reg_desc": "Inscrivez-vous à notre liste de diffusion...",
     "form_name": "Nom",

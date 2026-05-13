@@ -131,26 +131,27 @@
     ]
   },
   "events_page": {
-    "title": "Nos Événements",
-    "subtitle": "Participez à nos prochaines rencontres et développez vos compétences.",
-    "days_left": "{days} jours restants",
-    "register": "Détails & Inscription",
-    "quick_reg_title": "Restez informé de nos prochaines sessions.",
+    "hero_badge": "agenda",
+    "title": "Our Events",
+    "subtitle": "Participate in our upcoming gatherings and boost your skills with experts.",
+    "days_left": "{days} days left",
+    "register": "DDetails & Registration",
+    "quick_reg_title": "Stay informed about our upcoming sessions.",
     "quick_reg_desc": "Inscrivez-vous à notre liste de diffusion...",
     "form_name": "Nom",
     "form_email": "Adresse e-mail",
     "form_msg": "Message (Optionnel)",
     "submit": "S’inscrire à la liste"
   },
-  "event_detail": {
-    "back": "Back to events",
-    "about": "About this event",
-    "register_title": "Reserve your spot",
-    "name": "Full Name",
-    "email": "Email",
-    "message": "Message (Optional)",
-    "submit": "Confirm Registration",
-    "success_title": "Registration Successful!",
-    "success_desc": "A confirmation email has been sent."
-  }
+ "event_detail": {
+  "back": "Back to events",
+  "about": "About this event",
+  "register_title": "Reserve your spot",
+  "name": "Full Name",
+  "email": "Email",
+  "message": "Message (Optional)",
+  "submit": "Confirm Registration",
+  "success_title": "Registration Successful!",
+  "success_desc": "A confirmation email has been sent."
+}
 }

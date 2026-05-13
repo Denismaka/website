@@ -5,24 +5,215 @@ import { motion } from 'framer-motion';
 import { Calendar, MapPin, Users, Send, ArrowUpRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import PageHero from '@/components/PageHero';
+
 
 export default function EventsPage() {
     const t = useTranslations('events_page');
 
     // Mock données (à remplacer par une API plus tard)
     const events = [
-        { id: 1, title: 'DevConf Congo 2026', date: '15 Juin 2026', location: 'Kinshasa', attendees: '300+', image: 'https://images.unsplash.com/photo-1540575861501-7ad05823c95b', category: 'Conference' },
+        {
+            id: 1,
+            title: 'Congo Tech Summit 2026',
+            slug: 'congo-tech-summit-2026',
+            date: '12 Juin 2026',
+            parsedDate: '2026-06-12',
+            time: '09:00 - 18:00',
+            location: 'Kinshasa',
+            venue: 'Centre Financier de Kinshasa',
+            attendees: '500+',
+            price: '20$',
+            image: 'https://images.unsplash.com/photo-1511578314322-379afb476865',
+            category: 'Conférence',
+            featured: true,
+            status: 'upcoming',
+            organizer: 'Congo Developer Club',
+            shortDescription:
+                'Le plus grand sommet technologique réunissant développeurs, startups et leaders du numérique.',
+            description:
+                'Une journée de conférences, panels et networking autour de l’innovation, du cloud, de l’IA et de l’entrepreneuriat numérique en Afrique.',
+            speakers: [
+                {
+                    name: 'Patrick Ilunga',
+                    role: 'Tech Entrepreneur',
+                    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+                },
+            ],
+            tags: ['Innovation', 'Cloud', 'AI'],
+            registrationLink: '#',
+        },
+
+        {
+            id: 2,
+            title: 'AI & Data Bootcamp',
+            slug: 'ai-data-bootcamp',
+            date: '25 Juin 2026',
+            parsedDate: '2026-06-25',
+            time: '08:30 - 17:00',
+            location: 'Goma',
+            venue: 'Université de Goma',
+            attendees: '120+',
+            price: 'Gratuit',
+            image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+            category: 'Bootcamp',
+            featured: true,
+            status: 'upcoming',
+            organizer: 'Congo Developer Club',
+            shortDescription:
+                'Formation intensive sur l’intelligence artificielle, la data science et le machine learning.',
+            description:
+                'Découvrez les bases de Python, du machine learning et des pipelines de données à travers des ateliers pratiques et des études de cas réels.',
+            speakers: [
+                {
+                    name: 'Esther Kasongo',
+                    role: 'Data Scientist',
+                    avatar: 'https://randomuser.me/api/portraits/women/45.jpg',
+                },
+            ],
+            tags: ['AI', 'Data', 'Python'],
+            registrationLink: '#',
+        },
+
+        {
+            id: 3,
+            title: 'React Native Masterclass',
+            slug: 'react-native-masterclass',
+            date: '03 Juillet 2026',
+            parsedDate: '2026-07-03',
+            time: '10:00 - 16:00',
+            location: 'Lubumbashi',
+            venue: 'Hub Numérique Katanga',
+            attendees: '90+',
+            price: '15$',
+            image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+            category: 'Workshop',
+            featured: false,
+            status: 'upcoming',
+            organizer: 'Congo Developer Club',
+            shortDescription:
+                'Créez des applications mobiles performantes avec React Native.',
+            description:
+                'Une masterclass pratique dédiée à la création d’applications Android et iOS modernes avec React Native et Expo.',
+            speakers: [
+                {
+                    name: 'Grâce Mwamba',
+                    role: 'Mobile Developer',
+                    avatar: 'https://randomuser.me/api/portraits/women/65.jpg',
+                },
+            ],
+            tags: ['React Native', 'Mobile', 'Expo'],
+            registrationLink: '#',
+        },
+
+        {
+            id: 4,
+            title: 'Startup Pitch Night',
+            slug: 'startup-pitch-night',
+            date: '11 Juillet 2026',
+            parsedDate: '2026-07-11',
+            time: '18:00 - 22:00',
+            location: 'Bukavu',
+            venue: 'Bukavu Innovation Hub',
+            attendees: '200+',
+            price: '10$',
+            image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
+            category: 'Networking',
+            featured: true,
+            status: 'upcoming',
+            organizer: 'Congo Developer Club',
+            shortDescription:
+                'Une soirée dédiée aux startups innovantes et aux investisseurs.',
+            description:
+                'Des entrepreneurs présenteront leurs projets devant un jury composé d’investisseurs et d’experts du numérique.',
+            speakers: [
+                {
+                    name: 'Joel Mbuyi',
+                    role: 'Startup Mentor',
+                    avatar: 'https://randomuser.me/api/portraits/men/22.jpg',
+                },
+            ],
+            tags: ['Startup', 'Pitch', 'Networking'],
+            registrationLink: '#',
+        },
+
+        {
+            id: 5,
+            title: 'Cyber Security Day',
+            slug: 'cyber-security-day',
+            date: '19 Juillet 2026',
+            parsedDate: '2026-07-19',
+            time: '09:00 - 15:30',
+            location: 'Kisangani',
+            venue: 'Digital Security Center',
+            attendees: '140+',
+            price: 'Gratuit',
+            image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f',
+            category: 'Séminaire',
+            featured: false,
+            status: 'upcoming',
+            organizer: 'Congo Developer Club',
+            shortDescription:
+                'Sensibilisation et ateliers autour de la cybersécurité moderne.',
+            description:
+                'Découvrez les bonnes pratiques de sécurité informatique, la protection des données et la cybersécurité offensive.',
+            speakers: [
+                {
+                    name: 'Sarah Mukendi',
+                    role: 'Cybersecurity Analyst',
+                    avatar: 'https://randomuser.me/api/portraits/women/41.jpg',
+                },
+            ],
+            tags: ['Cybersecurity', 'Security', 'Privacy'],
+            registrationLink: '#',
+        },
+
+        {
+            id: 6,
+            title: 'Women in Tech RDC',
+            slug: 'women-in-tech-rdc',
+            date: '28 Juillet 2026',
+            parsedDate: '2026-07-28',
+            time: '11:00 - 17:00',
+            location: 'Kinshasa',
+            venue: 'Maison de la Femme Numérique',
+            attendees: '250+',
+            price: 'Gratuit',
+            image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d',
+            category: 'Communauté',
+            featured: true,
+            status: 'upcoming',
+            organizer: 'Congo Developer Club',
+            shortDescription:
+                'Célébrer et promouvoir les femmes dans l’écosystème technologique.',
+            description:
+                'Panels, ateliers et témoignages inspirants pour encourager l’inclusion et le leadership féminin dans la tech.',
+            speakers: [
+                {
+                    name: 'Linda Kabasele',
+                    role: 'Software Engineer',
+                    avatar: 'https://randomuser.me/api/portraits/women/56.jpg',
+                },
+            ],
+            tags: ['WomenTech', 'Leadership', 'Community'],
+            registrationLink: '#',
+        }
     ];
 
     return (
-        <div className="pt-20 pb-32 bg-background min-h-screen">
+        <div className="bg-background min-h-screen">
+            <PageHero
+                badge={t('hero_badge')}
+                title={t('title')}
+                description={t('subtitle')}
+            />
             <div className="max-w-screen-2xl mx-auto px-4 md:px-8">
                 {/* Header Section */}
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-20">
+                {/* <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-20">
                     <div className="font-mono text-[10px] font-bold text-primary mb-4 italic uppercase tracking-[0.3em]">&lt;upcoming_events&gt;</div>
                     <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">{t('title')}</h1>
                     <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">{t('subtitle')}</p>
-                </motion.div>
+                </motion.div> */}
 
                 {/* Grille d'événements */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
