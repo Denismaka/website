@@ -153,5 +153,94 @@
     "submit": "Confirmer l’inscription",
     "success_title": "Inscription réussie !",
     "success_desc": "Un e-mail de confirmation a été envoyé."
+  },
+  "blog": {
+    "badge": "tech_blog",
+    "title": "Developer Blog",
+    "subtitle": "Insights, tutorials, experiences, and updates about the tech ecosystem in DR Congo and around the world.",
+    "read_more": "Read article",
+    "posts": [
+      {
+        "title": "Pourquoi la RDC devient progressivement un hub technologique en Afrique centrale",
+        "excerpt": "Entre l’émergence des startups locales, la montée des communautés tech et l’accès croissant aux formations numériques, la RDC construit progressivement son identité dans l’écosystème technologique africain.",
+        "category": "Écosystème Tech",
+        "author": "Congo Developer Club",
+        "date": "12 Mai 2026",
+        "readingTime": "6 min",
+        "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+        "featured": true
+      },
+      {
+        "title": "Maîtriser TypeScript en 2026 : Guide moderne pour développeurs React et Node.js",
+        "excerpt": "Découvrez les nouveautés TypeScript, les meilleures pratiques de typage avancé et les patterns modernes utilisés dans les applications professionnelles.",
+        "category": "Développement Web",
+        "author": "Grâce Mwamba",
+        "date": "28 Avril 2026",
+        "readingTime": "10 min",
+        "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+        "featured": true
+      },
+      {
+        "title": "Retour sur notre Hackathon annuel : innovation, énergie et créativité",
+        "excerpt": "Plongez dans l’ambiance électrique de notre dernier hackathon et découvrez les projets gagnants imaginés pour résoudre des problèmes locaux grâce à la technologie.",
+        "category": "Événement",
+        "author": "CDC Media Team",
+        "date": "05 Mai 2026",
+        "readingTime": "5 min",
+        "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+        "featured": false
+      },
+      {
+        "title": "Redux Toolkit : erreurs fréquentes qui rendent les applications impossibles à maintenir",
+        "excerpt": "Une mauvaise architecture d’état global peut rapidement transformer une application moderne en véritable usine à gaz. Voici les erreurs les plus fréquentes et comment les éviter.",
+        "category": "Architecture Logicielle",
+        "author": "Tacite Wakilongo",
+        "date": "09 Mai 2026",
+        "readingTime": "8 min",
+        "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+        "featured": true
+      },
+      {
+        "title": "Open Source en Afrique : pourquoi contribuer change une carrière",
+        "excerpt": "Contribuer à des projets open source permet d’améliorer ses compétences, collaborer à l’international et renforcer la visibilité des développeurs africains.",
+        "category": "Open Source",
+        "author": "Patrick Ilunga",
+        "date": "21 Avril 2026",
+        "readingTime": "7 min",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+        "featured": false
+      },
+      {
+        "title": "IA générative et développement logiciel : accélérateur ou dette technique ?",
+        "excerpt": "Les outils d’IA accélèrent considérablement le développement, mais sans maîtrise des fondamentaux, ils peuvent aussi introduire des architectures fragiles et difficiles à maintenir.",
+        "category": "Intelligence Artificielle",
+        "author": "CDC Engineering",
+        "date": "11 Mai 2026",
+        "readingTime": "9 min",
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+        "featured": true
+      }
+    ]
+  },
+  "blog_detail": {
+    "back": "Retour au blog",
+    "about": "À propos de cet article",
+    "recent": "Articles récents",
+    "join_title": "Rejoindre le CDC",
+    "join_desc": "Ne manquez aucun de nos tutoriels et articles.",
+    "subscribe": "S'abonner",
+    "share": "Partager l'article"
+  },
+  "contact": {
+    "badge": "contact_us",
+    "title": "Discutons Tech.",
+    "desc": "Une question ? Un projet ? Envie de nous rejoindre ? Notre équipe est à votre écoute pour construire ensemble l'avenir de la tech au Congo.",
+    "email": "Email",
+    "location": "Localisation",
+    "name": "Nom complet",
+    "email_field": "Adresse e-mail",
+    "subject": "Sujet",
+    "message": "Message",
+    "submit": "Envoyer le message"
   }
 }

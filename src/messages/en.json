@@ -143,15 +143,104 @@
     "form_msg": "Message (Optionnel)",
     "submit": "S’inscrire à la liste"
   },
- "event_detail": {
-  "back": "Back to events",
-  "about": "About this event",
-  "register_title": "Reserve your spot",
-  "name": "Full Name",
-  "email": "Email",
-  "message": "Message (Optional)",
-  "submit": "Confirm Registration",
-  "success_title": "Registration Successful!",
-  "success_desc": "A confirmation email has been sent."
-}
+  "event_detail": {
+    "back": "Back to events",
+    "about": "About this event",
+    "register_title": "Reserve your spot",
+    "name": "Full Name",
+    "email": "Email",
+    "message": "Message (Optional)",
+    "submit": "Confirm Registration",
+    "success_title": "Registration Successful!",
+    "success_desc": "A confirmation email has been sent."
+  },
+  "blog": {
+    "badge": "blog_tech",
+    "title": "Blog des Développeurs",
+    "subtitle": "Analyses, tutoriels, retours d’expérience et actualités sur l’écosystème technologique en RDC et dans le monde.",
+    "read_more": "Lire l’article",
+    "posts": [
+      {
+        "title": "Why DR Congo is gradually becoming a tech hub in Central Africa",
+        "excerpt": "Between the rise of local startups, growing tech communities, and increasing access to digital education, DR Congo is progressively building its identity within the African tech ecosystem.",
+        "category": "Tech Ecosystem",
+        "author": "Congo Developer Club",
+        "date": "May 12, 2026",
+        "readingTime": "6 min",
+        "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+        "featured": true
+      },
+      {
+        "title": "Mastering TypeScript in 2026: A Modern Guide for React and Node.js Developers",
+        "excerpt": "Discover the latest TypeScript features, advanced typing best practices, and modern patterns used in professional applications.",
+        "category": "Web Development",
+        "author": "Grâce Mwamba",
+        "date": "April 28, 2026",
+        "readingTime": "10 min",
+        "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+        "featured": true
+      },
+      {
+        "title": "Looking Back at Our Annual Hackathon: Innovation, Energy, and Creativity",
+        "excerpt": "Dive into the electric atmosphere of our latest hackathon and discover the winning projects designed to solve local challenges through technology.",
+        "category": "Event",
+        "author": "CDC Media Team",
+        "date": "May 05, 2026",
+        "readingTime": "5 min",
+        "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+        "featured": false
+      },
+      {
+        "title": "Redux Toolkit: Common Mistakes That Make Applications Impossible to Maintain",
+        "excerpt": "Poor global state architecture can quickly turn a modern application into a real gas factory. Here are the most common mistakes and how to avoid them.",
+        "category": "Software Architecture",
+        "author": "Tacite Wakilongo",
+        "date": "May 09, 2026",
+        "readingTime": "8 min",
+        "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+        "featured": true
+      },
+      {
+        "title": "Open Source in Africa: Why Contributing Can Change Your Career",
+        "excerpt": "Contributing to open-source projects helps improve skills, collaborate internationally, and increase the visibility of African developers.",
+        "category": "Open Source",
+        "author": "Patrick Ilunga",
+        "date": "April 21, 2026",
+        "readingTime": "7 min",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+        "featured": false
+      },
+      {
+        "title": "Generative AI and Software Development: Accelerator or Technical Debt?",
+        "excerpt": "AI tools significantly speed up development, but without strong fundamentals, they can also introduce fragile and hard-to-maintain architectures.",
+        "category": "Artificial Intelligence",
+        "author": "CDC Engineering",
+        "date": "May 11, 2026",
+        "readingTime": "9 min",
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+        "featured": true
+      }
+    ]
+  },
+  "blog_detail": {
+    "back": "Back to blog",
+    "about": "About this article",
+    "recent": "Recent articles",
+    "join_title": "Join the CDC",
+    "join_desc": "Don’t miss any of our tutorials and articles.",
+    "subscribe": "Subscribe",
+    "share": "Share article"
+  },
+  "contact": {
+    "badge": "contact_us",
+    "title": "Let's talk tech.",
+    "desc": "Got a question? A project? Want to join us? Our team is ready to help you build the future of tech in Congo.",
+    "email": "Email",
+    "location": "Location",
+    "name": "Full Name",
+    "email_field": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send Message"
+  }
 }
