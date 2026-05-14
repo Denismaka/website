@@ -24,6 +24,7 @@ export default function Header() {
         { name: t('events'), path: '/events' },
         { name: t('blog'), path: '/blog' },
         { name: t('contact'), path: '/contact' },
+        {name: t('support'), path: '/support' },
     ];
 
     // Fonction de changement de langue optimisée avec le routeur next-intl
