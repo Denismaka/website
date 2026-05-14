@@ -6,6 +6,7 @@
     "events": "Events",
     "blog": "Blog",
     "contact": "Contact",
+    "support": "Support",
     "join": "Join Us"
   },
   "footer": {
@@ -242,5 +243,21 @@
     "subject": "Subject",
     "message": "Message",
     "submit": "Send Message"
+  },
+  "support": {
+    "badge": "support_us",
+    "title": "Support the Community",
+    "subtitle": "The Congo Developer Club is a non-profit initiative. Your support allows us to organize more events, mentor young developers, and build tomorrow's tech ecosystem.",
+    "donate_title": "Make a Donation",
+    "donate_desc": "Support our actions with a one-time or regular financial contribution. Every amount helps fund our servers, meetups, or equipment.",
+    "donate_btn": "Donate",
+    "sponsor_title": "Become a Sponsor",
+    "sponsor_desc": "Associate your company with DRC's leading developer club. Sponsor our events and hackathons to gain visibility among top talents.",
+    "sponsor_btn": "Contact Us",
+    "volunteer_title": "Become a Volunteer",
+    "volunteer_desc": "Have time or skills to offer? Help us with organization, communication, or become a mentor for younger developers.",
+    "volunteer_btn": "Join the Team",
+    "why_title": "Why support us?",
+    "why_desc": "Tech is a true social and economic elevator for our country. By supporting CDC, you directly participate in the emergence of a new generation of technical leaders. You make a digital future 'Made in Congo' possible."
   }
 }

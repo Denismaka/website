@@ -6,6 +6,7 @@
     "events": "Événements",
     "blog": "Blog",
     "contact": "Contact",
+    "support": "Nous Soutenir",
     "join": "Nous Rejoindre"
   },
   "footer": {
@@ -242,5 +243,21 @@
     "subject": "Sujet",
     "message": "Message",
     "submit": "Envoyer le message"
+  },
+  "support": {
+    "badge": "nous_soutenir",
+    "title": "Soutenir la Communauté",
+    "subtitle": "Le Congo Developer Club est une initiative à but non lucratif. Votre soutien nous permet d'organiser plus d'événements, d'accompagner de jeunes développeurs et de bâtir l'écosystème tech de demain.",
+    "donate_title": "Faire un don",
+    "donate_desc": "Soutenez nos actions par une contribution financière ponctuelle ou régulière. Chaque montant aide à financer nos serveurs, l'organisation de meetups ou le matériel.",
+    "donate_btn": "Faire un don",
+    "sponsor_title": "Devenir Sponsor",
+    "sponsor_desc": "Associez votre entreprise au premier club de développeurs de RDC. Sponsorisez nos événements et hackathons et gagnez en visibilité auprès des meilleurs talents.",
+    "sponsor_btn": "Nous Contacter",
+    "volunteer_title": "Devenir Bénévole",
+    "volunteer_desc": "Vous avez du temps ou des compétences à offrir ? Aidez-nous dans l'organisation, la communication, ou devenez mentor pour les plus jeunes développeurs.",
+    "volunteer_btn": "Rejoindre l'équipe",
+    "why_title": "Pourquoi nous soutenir ?",
+    "why_desc": "La tech est un véritable ascenseur social et économique pour notre pays. En soutenant le CDC, vous participez directement à l'émergence d'une nouvelle génération de leaders techniques. Vous rendez possible un avenir numérique 'Made in Congo'."
   }
 }
