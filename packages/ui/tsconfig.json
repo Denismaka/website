@@ -1,0 +1,9 @@
+{
+    "extends": "@cdc/config-typescript/base.json",
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "outDir": "dist",
+        "declaration": true
+    },
+    "include": ["src"]
+}

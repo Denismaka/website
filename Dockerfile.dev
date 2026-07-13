@@ -1,0 +1,24 @@
+# Development-only image. Per the architecture brief, Docker is required in
+# dev (same environment for every contributor) but is NOT mandatory in
+# production — the first prod deploy will run Node directly on the host.
+FROM node:22-alpine
+
+WORKDIR /app
+
+# Copy just the manifests first so `npm install` is cached across rebuilds
+# unless a package.json actually changed.
+COPY package.json package-lock.json* ./
+COPY apps/web/package.json apps/web/package.json
+COPY packages/ui/package.json packages/ui/package.json
+COPY packages/types/package.json packages/types/package.json
+COPY packages/api-client/package.json packages/api-client/package.json
+COPY packages/config-eslint/package.json packages/config-eslint/package.json
+COPY packages/config-typescript/package.json packages/config-typescript/package.json
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]

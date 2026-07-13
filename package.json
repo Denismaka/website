@@ -1,0 +1,20 @@
+{
+    "name": "cdc-platform",
+    "version": "0.1.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "npm run dev --workspace=web",
+        "build": "npm run build --workspace=web",
+        "start": "npm run start --workspace=web",
+        "lint": "npm run lint --workspaces --if-present",
+        "storybook": "npm run storybook --workspace=@cdc/ui",
+        "build-storybook": "npm run build-storybook --workspace=@cdc/ui"
+    },
+    "devDependencies": {
+        "typescript": "^5"
+    }
+}
