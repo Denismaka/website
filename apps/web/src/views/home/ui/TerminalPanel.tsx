@@ -1,26 +1,36 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { TiltCard } from "@/shared/ui";
+import { useTranslations } from "@/shared/i18n";
 
 const COMMAND = "npx join-congo-developer-club";
-const RESULTS = [
-    "10 234 développeurs",
-    "267 projets actifs",
-    "42 événements organisés",
-];
 
 export function TerminalPanel() {
+    const t = useTranslations();
+    const RESULTS = t.terminal.results;
     const [typed, setTyped] = useState(0);
     const [revealedResults, setRevealedResults] = useState(0);
     const [done, setDone] = useState(false);
-    const wrapRef = useRef<HTMLDivElement>(null);
-    const cardRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        const timers: ReturnType<typeof setTimeout>[] = [];
+
+        // Replay the typing animation (in the new language) whenever the
+        // locale changes, instead of swapping the text mid-animation. The 0ms
+        // timeout (rather than a direct call) keeps this an effect callback,
+        // not a synchronous render-phase state update.
+        timers.push(
+            setTimeout(() => {
+                setTyped(0);
+                setRevealedResults(0);
+                setDone(false);
+            }, 0),
+        );
+
         const reduced = window.matchMedia(
             "(prefers-reduced-motion: reduce)",
         ).matches;
-        const timers: ReturnType<typeof setTimeout>[] = [];
 
         if (reduced) {
             timers.push(
@@ -28,7 +38,7 @@ export function TerminalPanel() {
                     setTyped(COMMAND.length);
                     setRevealedResults(RESULTS.length);
                     setDone(true);
-                }, 0),
+                }, 10),
             );
             return () => timers.forEach(clearTimeout);
         }
@@ -53,35 +63,10 @@ export function TerminalPanel() {
         );
 
         return () => timers.forEach(clearTimeout);
-    }, []);
-
-    useEffect(() => {
-        const wrap = wrapRef.current;
-        const card = cardRef.current;
-        if (!wrap || !card) return;
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
-            return;
-
-        function onMove(e: MouseEvent) {
-            const rect = wrap!.getBoundingClientRect();
-            const px = (e.clientX - rect.left) / rect.width - 0.5;
-            const py = (e.clientY - rect.top) / rect.height - 0.5;
-            card!.style.transform = `perspective(900px) rotateY(${px * 8}deg) rotateX(${-py * 8}deg)`;
-        }
-        function onLeave() {
-            card!.style.transform =
-                "perspective(900px) rotateY(0deg) rotateX(0deg)";
-        }
-        wrap.addEventListener("mousemove", onMove);
-        wrap.addEventListener("mouseleave", onLeave);
-        return () => {
-            wrap.removeEventListener("mousemove", onMove);
-            wrap.removeEventListener("mouseleave", onLeave);
-        };
-    }, []);
+    }, [RESULTS]);
 
     return (
-        <div ref={wrapRef} className="relative w-full max-w-2xl">
+        <div className="relative w-full max-w-2xl">
             <div
                 aria-hidden
                 className="absolute -inset-14 -z-10 rounded-full opacity-60 blur-3xl"
@@ -90,9 +75,9 @@ export function TerminalPanel() {
                         "radial-gradient(closest-side, color-mix(in srgb, var(--brand) 35%, transparent), color-mix(in srgb, var(--accent) 25%, transparent) 70%, transparent)",
                 }}
             />
-            <div
-                ref={cardRef}
-                className="overflow-hidden rounded-2xl border border-white/15 bg-[#141a21] shadow-2xl transition-transform duration-150 ease-out will-change-transform"
+            <TiltCard
+                strength={8}
+                className="overflow-hidden rounded-2xl border border-white/15 bg-[#141a21] shadow-2xl"
             >
                 <div className="flex items-center gap-2 border-b border-white/10 px-6 py-4">
                     <span className="h-3 w-3 rounded-full bg-primary" />
@@ -129,7 +114,7 @@ export function TerminalPanel() {
                         </p>
                     )}
                 </div>
-            </div>
+            </TiltCard>
         </div>
     );
 }
