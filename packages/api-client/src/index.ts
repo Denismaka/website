@@ -32,3 +32,5 @@ export function joinCommunity(email: string) {
         body: JSON.stringify({ email }),
     });
 }
+
+export { getOrgContributors, type OrgContributor } from "./github";
