@@ -1,7 +1,7 @@
 export const navLinks = [
-    { label: "Accueil", href: "/" },
-    { label: "À propos", href: "#" },
-    { label: "Activités", href: "#" },
-    { label: "Événements", href: "#" },
-    { label: "Blog", href: "#" },
-];
+    { key: "home", href: "/" },
+    { key: "about", href: "/a-propos" },
+    { key: "activities", href: "/activites" },
+    { key: "events", href: "/evenements" },
+    { key: "blog", href: "/blog" },
+] as const;

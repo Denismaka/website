@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "@/shared/i18n";
 
 const RADIUS = 15;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 export default function BackToTop() {
+    const t = useTranslations();
     const [scrolledEnough, setScrolledEnough] = useState(false);
     // The footer's bottom bar shares the same bottom-right corner as this
     // button, so it must step aside once that corner scrolls into view.
@@ -47,7 +49,7 @@ export default function BackToTop() {
     return (
         <button
             className={`back-to-top${visible ? " visible" : ""}`}
-            aria-label="Retour en haut de page"
+            aria-label={t.backToTop.ariaLabel}
             onClick={scrollToTop}
         >
             <span className="progress-ring-wrap">
@@ -64,7 +66,7 @@ export default function BackToTop() {
                 </svg>
                 <span className="mark">CDC</span>
             </span>
-            <span className="label">Haut de page</span>
+            <span className="label">{t.backToTop.label}</span>
         </button>
     );
 }

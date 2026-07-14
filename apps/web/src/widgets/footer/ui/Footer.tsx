@@ -6,22 +6,16 @@ import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon, XIcon } from "@/shared/icons/BrandIcons";
 import { navLinks } from "@/shared/config/nav-links";
 import { useJoinCommunity } from "@/features/join-community";
+import { useTranslations } from "@/shared/i18n";
 
-const communityLinks = [
-    { label: "Contact", href: "#" },
-    { label: "Nous soutenir", href: "#" },
-];
-
-const legalLinks = [
-    { label: "Confidentialité", href: "#" },
-    { label: "Mentions légales", href: "#" },
-    { label: "Cookies", href: "#" },
-];
+const communityLinkKeys = ["contact", "support"] as const;
+const legalLinkKeys = ["privacy", "terms", "cookies"] as const;
 
 export default function Footer() {
     const giantRef = useRef<HTMLSpanElement>(null);
     const [email, setEmail] = useState("");
     const joinCommunity = useJoinCommunity();
+    const t = useTranslations();
 
     useEffect(() => {
         const giant = giantRef.current;
@@ -48,11 +42,11 @@ export default function Footer() {
         <footer className="site-footer">
             <div className="footer-cta">
                 <h2>
-                    On construit la suite,
+                    {t.footer.ctaLine1}
                     <br />
-                    <span className="accent">ensemble.</span>
+                    <span className="accent">{t.footer.ctaLine2}</span>
                 </h2>
-                <p>Rejoins plus de 10K+ développeurs qui font grandir la tech congolaise, un commit à la fois.</p>
+                <p>{t.footer.ctaText}</p>
                 <form
                     className="footer-form"
                     onSubmit={(e) => {
@@ -62,22 +56,18 @@ export default function Footer() {
                 >
                     <input
                         type="email"
-                        placeholder="ton@email.com"
+                        placeholder={t.footer.emailPlaceholder}
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         disabled={joinCommunity.isPending}
                     />
                     <button type="submit" disabled={joinCommunity.isPending}>
-                        {joinCommunity.isPending ? "Envoi…" : "Rejoindre"}
+                        {joinCommunity.isPending ? t.footer.sending : t.footer.join}
                     </button>
                 </form>
-                {joinCommunity.isSuccess && <p className="form-feedback">Bienvenue dans la communauté 🎉</p>}
-                {joinCommunity.isError && (
-                    <p className="form-feedback form-feedback-error">
-                        Une erreur est survenue, réessaie dans un instant.
-                    </p>
-                )}
+                {joinCommunity.isSuccess && <p className="form-feedback">{t.footer.success}</p>}
+                {joinCommunity.isError && <p className="form-feedback form-feedback-error">{t.footer.error}</p>}
             </div>
 
             <div className="footer-grid">
@@ -86,10 +76,7 @@ export default function Footer() {
                         <span className="brand-mark">CDC</span>
                         <span className="footer-brand-name">Congo Developer Club</span>
                     </div>
-                    <p>
-                        La communauté de référence pour les développeurs en République Démocratique du Congo.
-                        Ensemble, bâtissons l&apos;écosystème tech de demain.
-                    </p>
+                    <p>{t.footer.brandDescription}</p>
                     <div className="social-row">
                         <a href="https://github.com/Denismaka" target="_blank" rel="noopener" aria-label="GitHub">
                             <GithubIcon width={17} height={17} />
@@ -107,33 +94,33 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-col">
-                    <h4>Navigation</h4>
+                    <h4>{t.footer.navigationHeading}</h4>
                     <ul>
                         {navLinks.map((link) => (
-                            <li key={link.label}>
-                                <Link href={link.href}>{link.label}</Link>
+                            <li key={link.key}>
+                                <Link href={link.href}>{t.nav[link.key]}</Link>
                             </li>
                         ))}
                     </ul>
                 </div>
 
                 <div className="footer-col">
-                    <h4>Communauté</h4>
+                    <h4>{t.footer.communityHeading}</h4>
                     <ul>
-                        {communityLinks.map((link) => (
-                            <li key={link.label}>
-                                <Link href={link.href}>{link.label}</Link>
+                        {communityLinkKeys.map((key) => (
+                            <li key={key}>
+                                <Link href="#">{t.footer[key]}</Link>
                             </li>
                         ))}
                     </ul>
                 </div>
 
                 <div className="footer-col">
-                    <h4>Légal</h4>
+                    <h4>{t.footer.legalHeading}</h4>
                     <ul>
-                        {legalLinks.map((link) => (
-                            <li key={link.label}>
-                                <Link href={link.href}>{link.label}</Link>
+                        {legalLinkKeys.map((key) => (
+                            <li key={key}>
+                                <Link href="#">{t.footer[key]}</Link>
                             </li>
                         ))}
                     </ul>
@@ -147,14 +134,14 @@ export default function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <span>© 2026 Congo Developer Club. Tous droits réservés.</span>
+                <span>{t.footer.copyright}</span>
                 <span className="credit">
-                    Développé par
+                    {t.footer.developedBy}
                     <a href="https://github.com/Denismaka" target="_blank" rel="noopener">
                         <GithubIcon width={14} height={14} style={{ verticalAlign: -2, marginRight: 2 }} />
                         Denis Maka
                     </a>
-                    · Fait en RDC
+                    · {t.footer.madeIn}
                 </span>
             </div>
         </footer>

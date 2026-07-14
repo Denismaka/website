@@ -7,6 +7,7 @@ import { Menu, Moon, Sun, X as CloseIcon } from "lucide-react";
 import { navLinks } from "@/shared/config/nav-links";
 import { useThemeStore, type Theme } from "@/shared/store/useThemeStore";
 import { useMobileMenuStore } from "@/shared/store/useMobileMenuStore";
+import { useLocaleStore, useTranslations } from "@/shared/i18n";
 
 function subscribeToColorScheme(callback: () => void) {
     const mql = window.matchMedia("(prefers-color-scheme: dark)");
@@ -25,7 +26,9 @@ function getServerSnapshot() {
 
 export default function Navbar() {
     const pathname = usePathname();
-    const [lang, setLang] = useState<"fr" | "en">("fr");
+    const locale = useLocaleStore((s) => s.locale);
+    const setLocale = useLocaleStore((s) => s.setLocale);
+    const t = useTranslations();
     const theme = useThemeStore((s) => s.theme);
     const setTheme = useThemeStore((s) => s.setTheme);
     const [scrolled, setScrolled] = useState(false);
@@ -47,6 +50,10 @@ export default function Navbar() {
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
+
+    useEffect(() => {
+        document.documentElement.lang = locale;
+    }, [locale]);
 
     const isDark = theme === "dark" || (theme === null && systemPrefersDark);
 
@@ -83,15 +90,16 @@ export default function Navbar() {
                     <div className="nav-links" ref={linksRef} onMouseLeave={hideIndicator}>
                         <span className="nav-indicator" ref={indicatorRef} aria-hidden="true" />
                         {navLinks.map((link) => {
-                            const active = link.href === "/" && pathname === "/";
+                            const active =
+                                link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
                             return (
                                 <Link
-                                    key={link.label}
+                                    key={link.key}
                                     href={link.href}
                                     className={active ? "active" : undefined}
                                     onMouseEnter={(e) => moveIndicator(e.currentTarget)}
                                 >
-                                    {link.label}
+                                    {t.nav[link.key]}
                                 </Link>
                             );
                         })}
@@ -99,26 +107,26 @@ export default function Navbar() {
 
                     <div className="nav-utility">
                         <div className="lang-toggle" role="group" aria-label="Langue">
-                            <button aria-pressed={lang === "fr"} onClick={() => setLang("fr")}>
+                            <button aria-pressed={locale === "fr"} onClick={() => setLocale("fr")}>
                                 FR
                             </button>
-                            <button aria-pressed={lang === "en"} onClick={() => setLang("en")}>
+                            <button aria-pressed={locale === "en"} onClick={() => setLocale("en")}>
                                 EN
                             </button>
                         </div>
-                        <button className="icon-btn" aria-label="Basculer le thème" onClick={toggleTheme}>
+                        <button className="icon-btn" aria-label={t.nav.themeToggle} onClick={toggleTheme}>
                             {isDark ? <Moon size={20} /> : <Sun size={20} />}
                         </button>
                         <button
                             className="icon-btn menu-btn"
-                            aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
+                            aria-label={mobileOpen ? t.nav.closeMenu : t.nav.openMenu}
                             aria-expanded={mobileOpen}
                             onClick={toggleMobileMenu}
                         >
                             {mobileOpen ? <CloseIcon size={20} /> : <Menu size={20} />}
                         </button>
                         <Link href="#" className="cta">
-                            Nous rejoindre
+                            {t.nav.join}
                         </Link>
                     </div>
                 </nav>
@@ -126,21 +134,21 @@ export default function Navbar() {
                 {mobileOpen && (
                     <div className="mobile-panel">
                         {navLinks.map((link) => (
-                            <Link key={link.label} href={link.href} onClick={closeMobileMenu}>
-                                {link.label}
+                            <Link key={link.key} href={link.href} onClick={closeMobileMenu}>
+                                {t.nav[link.key]}
                             </Link>
                         ))}
                         <div className="mobile-panel-footer">
                             <div className="lang-toggle" role="group" aria-label="Langue">
-                                <button aria-pressed={lang === "fr"} onClick={() => setLang("fr")}>
+                                <button aria-pressed={locale === "fr"} onClick={() => setLocale("fr")}>
                                     FR
                                 </button>
-                                <button aria-pressed={lang === "en"} onClick={() => setLang("en")}>
+                                <button aria-pressed={locale === "en"} onClick={() => setLocale("en")}>
                                     EN
                                 </button>
                             </div>
                             <Link href="#" className="cta" onClick={closeMobileMenu}>
-                                Nous rejoindre
+                                {t.nav.join}
                             </Link>
                         </div>
                     </div>
