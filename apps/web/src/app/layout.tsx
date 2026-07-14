@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/widgets/navbar";
 import { Footer } from "@/widgets/footer";
 import { BackToTop } from "@/widgets/back-to-top";
+import { CursorSpotlight } from "@/widgets/cursor-spotlight";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -34,10 +35,13 @@ export default function RootLayout({
         >
             <body className="min-h-full flex flex-col" suppressHydrationWarning>
                 <Providers>
-                    <Navbar />
-                    {children}
-                    <Footer />
-                    <BackToTop />
+                    <CursorSpotlight />
+                    <div className="above-spotlight flex flex-1 flex-col">
+                        <Navbar />
+                        {children}
+                        <Footer />
+                        <BackToTop />
+                    </div>
                 </Providers>
             </body>
         </html>
