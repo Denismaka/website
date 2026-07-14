@@ -129,6 +129,29 @@ composants s'y affichent donc avec la police système, pas Geist.
   exemples actuels. Ne jamais y stocker une liste d'événements, de membres,
   etc. — ça, c'est TanStack Query.
 
+## Internationalisation (FR/EN)
+
+Le sélecteur FR/EN de la navbar change réellement la langue affichée,
+instantanément, sans recharger la page ni changer d'URL — c'est un choix de
+confort volontaire, pas une limitation technique.
+
+- `shared/i18n/locale-store.ts` : la locale courante, dans un store **Zustand**
+  (état d'interface, même logique que le thème clair/sombre).
+- `shared/i18n/dictionaries.ts` : toutes les chaînes d'UI, `fr` et `en` en
+  miroir.
+- `shared/i18n/useTranslations()` : hook qui retourne le dictionnaire de la
+  locale active.
+- Contenu de démonstration bilingue : `entities/event/model/events.seed.en.ts`
+  et `entities/post/model/posts.seed.en.ts`, sélectionnés via
+  `useLocalizedEvents()` / `useLocalizedPosts()`.
+
+**Compromis assumé** : les composants qui affichent du texte traduit sont des
+Client Components (`"use client"`), puisqu'ils doivent réagir instantanément
+au changement de locale. C'est un renoncement volontaire à un rendu 100% SSR
+sur ces sections, en échange d'un changement de langue immédiat sans
+rechargement — cohérent avec l'expérience attendue d'un sélecteur de langue
+en pilule dans la navbar plutôt qu'une route `/en/...` séparée.
+
 ## Server Actions (BFF)
 
 Toute communication avec un backend passe par une Server Action
