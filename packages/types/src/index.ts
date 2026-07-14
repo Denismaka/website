@@ -16,3 +16,15 @@ export interface Member {
     githubHandle: string;
     avatarUrl?: string;
 }
+
+/** Canonical, locale-independent category keys — look up the display label via a dictionary. */
+export type PostCategory = "tutorials" | "news" | "recaps" | "community";
+
+export interface Post {
+    id: string;
+    title: string;
+    excerpt: string;
+    date: string;
+    category: PostCategory;
+    readMinutes: number;
+}
