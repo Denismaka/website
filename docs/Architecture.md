@@ -6,19 +6,19 @@ réel dans ce dépôt.
 
 ## Stack technique
 
-| Couche | Choix | Pourquoi |
-|---|---|---|
-| Framework | **Next.js 16** (App Router, Turbopack) | SSR, SSG, routing intégré, optimisations auto, Server Actions natifs |
-| Langage | **TypeScript** partout | erreurs détectées au développement, autocomplétion, code maintenable |
-| UI Kit | **Shadcn/UI** (dans `packages/ui`) | composants accessibles, personnalisables, basés sur Tailwind CSS |
-| Style | **Tailwind CSS v4** | config CSS-first (`@theme`), tokens partagés entre apps |
-| Documentation UI | **Storybook** (`packages/ui`) | isolation des composants, états visuels, sandbox sans backend |
-| Données serveur | **TanStack Query** | cache, synchronisation, mutations, états loading/error |
-| État UI local | **Zustand** | thème clair/sombre, menu mobile — jamais pour des données API |
-| Communication backend | **Server Actions (BFF)** | le navigateur ne parle jamais directement au backend |
-| Monorepo | **npm workspaces** | `apps/*` + `packages/*` dans un seul dépôt |
-| Architecture de code | **Feature-Sliced Design** | par app, dans `src/` |
-| Conteneurisation | **Docker** (dev uniquement) | même environnement pour tous ; la prod tourne sans Docker pour l'instant |
+| Couche                | Choix                                  | Pourquoi                                                                 |
+| --------------------- | -------------------------------------- | ------------------------------------------------------------------------ |
+| Framework             | **Next.js 16** (App Router, Turbopack) | SSR, SSG, routing intégré, optimisations auto, Server Actions natifs     |
+| Langage               | **TypeScript** partout                 | erreurs détectées au développement, autocomplétion, code maintenable     |
+| UI Kit                | **Shadcn/UI** (dans `packages/ui`)     | composants accessibles, personnalisables, basés sur Tailwind CSS         |
+| Style                 | **Tailwind CSS v4**                    | config CSS-first (`@theme`), tokens partagés entre apps                  |
+| Documentation UI      | **Storybook** (`packages/ui`)          | isolation des composants, états visuels, sandbox sans backend            |
+| Données serveur       | **TanStack Query**                     | cache, synchronisation, mutations, états loading/error                   |
+| État UI local         | **Zustand**                            | thème clair/sombre, menu mobile — jamais pour des données API            |
+| Communication backend | **Server Actions (BFF)**               | le navigateur ne parle jamais directement au backend                     |
+| Monorepo              | **npm workspaces**                     | `apps/*` + `packages/*` dans un seul dépôt                               |
+| Architecture de code  | **Feature-Sliced Design**              | par app, dans `src/`                                                     |
+| Conteneurisation      | **Docker** (dev uniquement)            | même environnement pour tous ; la prod tourne sans Docker pour l'instant |
 
 ## Arborescence du monorepo
 
@@ -117,12 +117,12 @@ composants s'y affichent donc avec la police système, pas Geist.
 - **TanStack Query** : toute donnée qui vient d'une API (événements, membres,
   projets…) passe par un hook `useXxx` dans `entities/*/model`, lui-même
   appelant une Server Action.
-  - Lecture (`useQuery`) : `entities/event` (`getEvents.action.ts` + `useEvents.ts`),
-    prêt à être branché dès qu'un vrai backend existe (`CDC_BACKEND_URL`).
-  - Écriture (`useMutation`) : `features/join-community` (`join.action.ts` +
-    `useJoinCommunity.ts`), déjà branché sur le formulaire "Rejoindre" du
-    footer — échoue proprement (message d'erreur, pas de crash) tant qu'aucun
-    backend ne répond sur `/members/join`.
+    - Lecture (`useQuery`) : `entities/event` (`getEvents.action.ts` + `useEvents.ts`),
+      prêt à être branché dès qu'un vrai backend existe (`CDC_BACKEND_URL`).
+    - Écriture (`useMutation`) : `features/join-community` (`join.action.ts` +
+      `useJoinCommunity.ts`), déjà branché sur le formulaire "Rejoindre" du
+      footer — échoue proprement (message d'erreur, pas de crash) tant qu'aucun
+      backend ne répond sur `/members/join`.
 - **Zustand** : uniquement de l'état d'interface qui ne vient jamais d'une
   API — `shared/store/useThemeStore.ts` (clair/sombre) et
   `useMobileMenuStore.ts` (menu mobile ouvert/fermé) en sont les deux
