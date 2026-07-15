@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Congo Developer Club — Plateforme
 
-## Getting Started
+Monorepo de la plateforme web du **Congo Developer Club (CDC)**, la
+communauté de référence pour les développeurs en République Démocratique du
+Congo.
 
-First, run the development server:
+Architecture détaillée : [docs/Architecture.md](docs/Architecture.md) ·
+Suite des travaux : [docs/Roadmap.md](docs/Roadmap.md)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack technique
+
+Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · Shadcn/UI ·
+Storybook · TanStack Query · Zustand · Server Actions (BFF) · npm workspaces ·
+Feature-Sliced Design · Docker (dev uniquement).
+
+Palette de marque : blanc `#FFFFFF` · bleu `#3C7EA9` · vert `#50AA79` ·
+orange `#F5A623`.
+
+## Structure du dépôt
+
+```
+apps/
+  web/                 l'application publique Next.js
+packages/
+  ui/                  composants Shadcn/UI partagés + Storybook
+  types/               types TypeScript partagés
+  api-client/          client HTTP server-only (consommé par les Server Actions)
+  config-eslint/       preset ESLint partagé
+  config-typescript/   tsconfig de base partagé
+docs/                  Architecture.md, Roadmap.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Détail de la Feature-Sliced Design (`apps/web/src/{app,views,widgets,
+features,entities,shared,processes}`) : voir
+[docs/Architecture.md](docs/Architecture.md).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lancer le projet
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+npm install
+npm run dev
+```
 
-## Learn More
+Puis ouvrir http://localhost:3000.
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm run storybook        # catalogue de composants (packages/ui) sur :6006
+npm run lint              # lint de tous les workspaces
+npm run build              # build de production de l'app web
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Avec Docker (dev)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+docker compose up
+```
 
-## Deploy on Vercel
+Démarre l'app web (port 3000) et Postgres (port 5432). Docker n'est utilisé
+qu'en développement — voir [docs/Architecture.md](docs/Architecture.md#docker-développement-uniquement)
+pour le raisonnement sur la prod.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribution — navbar, footer & bouton retour en haut
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Auteur : Denis Maka ([@Denismaka](https://github.com/Denismaka))**
+
+Avant la mise en place du monorepo, une première refonte de l'identité
+visuelle du site (alors un simple projet Next.js, sans le reste de la stack
+ci-dessus) a posé la navbar, le footer et le bouton "retour en haut"
+actuels :
+
+- **Navbar** : barre flottante fixe, capsule translucide avec flou, liens
+  réduits à l'essentiel (Accueil, À propos, Activités, Événements, Blog),
+  pilule animée qui suit le lien survolé, sélecteur FR/EN, thème
+  clair/sombre, repli mobile.
+- **Footer** : bandeau CTA newsletter, grille de liens sur 4 colonnes,
+  wordmark "Congo Developer Club" en très grand format qui s'étire
+  dynamiquement (mesuré en JS) sur toute la largeur de la grille.
+- **Bouton retour en haut** : anneau de progression de scroll (SVG) avec la
+  marque CDC au centre plutôt qu'un bouton carré/rond avec flèche.
+
+Décisions de design conservées telles quelles :
+
+- **Pas d'icône devant chaque lien texte du footer** — les libellés sont
+  déjà auto-explicites ; les icônes restent réservées aux réseaux sociaux et,
+  le cas échéant, à un indicateur de lien externe.
+- **Lucide ne fournit pas de logos de marque** (GitHub, X, LinkedIn) : ces
+  icônes sont des SVG dessinés à la main
+  (`apps/web/src/shared/icons/BrandIcons.tsx`) ; le reste de l'interface
+  utilise Lucide.
+- **Polices** : Geist Sans / Geist Mono via `next/font/google`,
+  auto-hébergées par Next.js.
+- La palette et la charte visuelle du site public (fond noir + émeraude) ont
+  depuis été remplacées par la palette de marque officielle ci-dessus, définie
+  dans le brief d'architecture.

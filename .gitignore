@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+# dependencies (monorepo: root + any nested node_modules)
+node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -10,28 +10,31 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# testing / coverage (root or any workspace)
+coverage/
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
-# production
+# production builds
 /build
+dist/
 
-# misc
-.DS_Store
-*.pem
+# storybook
+storybook-static/
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+# turborepo (in case it gets added later)
+.turbo/
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files — ignore real/local env files but keep committed templates
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# docker local overrides
+docker-compose.override.yml
 
 # vercel
 .vercel
@@ -39,3 +42,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# editors / OS
+.claude/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.pem
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.eslintcache

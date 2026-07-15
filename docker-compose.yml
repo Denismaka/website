@@ -1,0 +1,34 @@
+# Dev-only stack. `docker compose up` gives every contributor the same
+# Node + Postgres versions. Production is planned to run without Docker
+# initially (Node + Postgres on the host, PHP joining later if needed).
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        ports:
+            - "3000:3000"
+        environment:
+            - CDC_BACKEND_URL=http://api:4000
+            - WATCHPACK_POLLING=true
+        volumes:
+            - .:/app
+            - /app/node_modules
+            - /app/apps/web/.next
+        depends_on:
+            - db
+
+    db:
+        image: postgres:16-alpine
+        restart: unless-stopped
+        environment:
+            POSTGRES_USER: cdc
+            POSTGRES_PASSWORD: cdc
+            POSTGRES_DB: cdc_dev
+        ports:
+            - "5432:5432"
+        volumes:
+            - db-data:/var/lib/postgresql/data
+
+volumes:
+    db-data:
